@@ -21,9 +21,16 @@ Lamentum 한국어 패치
 
 ## Checksum
 
+아래 명령의 결과값이 `True`여야 함.
+
+### Original
+
 ```ps1
-Get-FileHash -Algorithm MD5 resources.assets
+(Get-FileHash -Algorithm MD5 resources.assets).Hash -eq "3382A7131C78013BAC87D36F2719C008"
 ```
 
-- origin — `3382A7131C78013BAC87D36F2719C008`
-- patch — `EFE8916109140FBCE937D1320659CCE4`
+### Patch
+
+```ps1
+(Get-FileHash -Algorithm MD5 resources.assets).Hash -eq "EFE8916109140FBCE937D1320659CCE4"
+```
